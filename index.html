@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./images/">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./js/">
+    <title>Rock Paper scissors</title>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="scoreboard-title">
+                <h1>ROCK</h1>
+                <H1>PAPER</H1>
+                <h1>SCISSORS</h1>
+            </div>
+            <div class="scoreboard-button">
+                <p>SCORE</p>
+                <h1 id="count">0</h1>
+            </div>
+        </div>
+
+    </header>
+    <section class="main">
+        <div class="challenge-container " >
+            <div class="hand paper" onclick="pickUserHand('paper')">
+                <img src="/images/Paper.png" alt="img">
+            </div>
+            <div class="hand scissors">
+                <img src="/images/Scissors.png" alt="img" onclick="pickUserHand('scissors')">
+            </div>
+            <div class="hand rock">
+                <img src="/images/Rock.png" alt="img" onclick="pickUserHand('rock')">
+            </div>
+        </div>
+
+        <div class="contest">       
+            <div class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handImageContainer">
+                  <img id="userPickImage" src="/images/Paper.png" alt="img">
+                </div>
+            </div>
+
+            <div class="referee"> 
+                <div class="decision">
+                    <h1>YOU WIN!</h1>
+                </div>
+                <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+            </div>
+
+            <div class="computerhand">
+                <h1>THE HOUSE PICKED</h1>     
+                <div class="handImageContainer">
+                  <img id="computerPickImage" src="/images/Rock.png" alt="img"/> 
+                </div>   
+            </div> 
+        </div> 
+        <!-- <div class="contest">       
+            <div class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handImageContainer">
+                  <img id="userPickImage" src="/images/Paper.png">
+                </div>
+            </div>
+            <div class="referee"> 
+                <div class="decision"><h1> YOU WIN! </h1></div>
+                <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+            </div>
+            <div class="computerhand">
+                <h1>THE HOUSE PICKED</h1>
+                <div class="handImageContainer">
+                  <img id="computerPickImage" src='/images/Scissors.png' /> 
+                </div>   
+            </div> -->
+    </section>
+    <script src="./js/index.js"></script>
+</body>
+</html>
